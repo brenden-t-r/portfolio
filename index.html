@@ -94,9 +94,9 @@
             }
         }
     </style>
+
 </head>
 <body>
-
 <div class="sidebar">
     <img alt="Brenden" class="avatar" src="avatar.jpg" loading="lazy">
     <div class="sidebar-text">
@@ -133,30 +133,58 @@
     and Action cards with various effects.
 </p>
 <p>
-    <a href="https://store.steampowered.com/app/2483240/Molt/">https://store.steampowered.com/app/2483240/Molt/</a>
+    <a href="https://store.steampowered.com/app/2483240/Molt/" target="_blank">https://store.steampowered.com/app/2483240/Molt/</a>
 </p>
 <p>
-    <img src="molt_screenshot.webp" alt="Molt screenshot"/>
+    <img src="molt_screenshot_1.png" style="margin-bottom:0;" alt="Molt screenshot"/>
 </p>
-<p class="video-wrapper">
-    <iframe src="https://www.youtube.com/embed/30wrb06_mJ4" title="Molt, the Snake Card Game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p style="display: flex; justify-content: space-evenly; margin-top: -15px;">
+    <img height="100%" style="margin-right: 2px;" src="molt_screenshot_3.png" alt="Molt screenshot"/>
+    <img height="100%" style="margin-left: 2px;" src="molt_screenshot_2.png" alt="Molt screenshot"/>
+</p>
+<p style="display: flex; justify-content: space-evenly; margin-top: -15px;">
+    <video id="molt-vid" style="margin-right: 2px; width:100%;" autoplay loop muted>
+        <source src="molt_video_1.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <video id="molt-vid-2" style="margin-left: 2px; width:100%;" autoplay loop muted>
+        <source src="molt_video_2.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
 </p>
 
+
+<hr/>
 <h2>Tree Squirrel</h2>
 <p>
     PlayDate game
 </p>
 <p>
     Very simple game written in C for the PlayDate console. Balance while climbing a tree, collecting acorns and avoiding spiders.
-</p><br/>
-<p style="text-align: center;">
-    <img alt="playdate console" style="max-width:351px"
-         loading="lazy" role="presentation"
-         src="playdate_gif.gif">
 </p>
-    <hr/>
+    <p>
+        <a href="https://brendentr.itch.io/tree-squirrel" target="_blank">https://brendentr.itch.io/tree-squirrel</a>
+    </p>
+    <br/>
+<video id="playdate-vid" style="margin-top: -15px; width:100%; margin-bottom:18px;" controls loop>
+    <source src="playdate_vid.webm" type="video/webm">
+    Your browser does not support the video tag.
+</video>
+<video id="playdate-vid-2" style="margin-top: -15px; width:351px; margin-bottom:18px;" controls loop>
+    <source src="playdate_gif.webm" type="video/webm">
+    Your browser does not support the video tag.
+</video>
+<hr/>
 <br/>
     <p style="text-align: center;">Thanks for taking a look!</p>
 </div>
 </body>
+<script>
+    const video = document.getElementById('molt-vid');
+    video.playbackRate = 2;
+    const video2 = document.getElementById('molt-vid-2');
+    video2.playbackRate = 1.5;
+    const video4 = document.getElementById('playdate-vid-2');
+    video4.playbackRate = 1.5;
+</script>
 </html>
