@@ -93,6 +93,14 @@
             .sidebar {
                 display: none !important;
             }
+            .d-column{
+                display: none !important;
+            }
+        }
+        @media screen and (min-width: 680px) {
+            .d-single{
+                display: none !important;
+            }
         }
     </style>
 
@@ -102,11 +110,7 @@
     <img alt="Brenden" class="avatar" src="avatar.jpg" loading="lazy">
     <div class="sidebar-text">
         <small>Brenden <br/>Romanowski</small><br/>
-<!--                            <a href="#">Resume</a><br/>-->
-<!--        <a href="#" style="font-weight:500;text-decoration: none;">Portfolio</a><br/>-->
-<!--        <a href="https://github.com/brenden-t-r/" target="_blank">GitHub</a><br/>-->
         <a href="https://www.linkedin.com/in/brenden-romanowski-405616152/" target="_blank">LinkedIn</a><br/>
-<!--        <a href="https://mastodon.gamedev.place/@Brenden" target="_blank">Mastodon</a><br/>-->
     </div>
 </div>
 
@@ -139,16 +143,32 @@
 <p>
     <img src="molt_screenshot_1.png" style="margin-bottom:0;" alt="Molt screenshot"/>
 </p>
-<p style="display: flex; justify-content: space-evenly; margin-top: -15px;">
+
+<p class="d-column" style="display: flex; justify-content: space-evenly; margin-top:-15px;">
     <img height="100%" style="margin-right: 2px;" src="molt_screenshot_3.png" alt="Molt screenshot"/>
     <img height="100%" style="margin-left: 2px;" src="molt_screenshot_2.png" alt="Molt screenshot"/>
 </p>
-<p style="display: flex; justify-content: space-evenly; margin-top: -15px;">
-    <video id="molt-vid" style="margin-right: 2px; width:100%;" autoplay loop muted>
+<p class="d-single" style="margin-top:-15px;">
+    <img style="margin-bottom: 4px;" src="molt_screenshot_3.png" alt="Molt screenshot"/>
+    <img src="molt_screenshot_2.png" alt="Molt screenshot"/>
+</p>
+
+<p class="d-column" style="display: flex; justify-content: space-evenly; margin-top: -15px;">
+    <video class="video" style="margin-right: 2px; width:100%;" autoplay loop muted>
         <source src="molt_video_1.webm" type="video/webm">
         Your browser does not support the video tag.
     </video>
-    <video id="molt-vid-2" style="margin-left: 2px; width:100%;" autoplay loop muted>
+    <video class="video" style="margin-left: 2px; width:100%;" autoplay loop muted>
+        <source src="molt_video_2.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+</p>
+<p class="d-single" style="margin-top:-15px;">
+    <video class="video" style="width:100%;margin-bottom: 4px;" autoplay loop muted>
+        <source src="molt_video_1.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <video class="video" style="width:100%;" autoplay loop muted>
         <source src="molt_video_2.webm" type="video/webm">
         Your browser does not support the video tag.
     </video>
@@ -167,11 +187,11 @@
         <a href="https://brendentr.itch.io/tree-squirrel" target="_blank">https://brendentr.itch.io/tree-squirrel</a>
     </p>
     <br/>
-<video id="playdate-vid" style="margin-top: -15px; width:100%; margin-bottom:18px;" controls loop>
+<video class="video" style="margin-top: -15px; width:100%; margin-bottom:18px;" controls loop>
     <source src="playdate_vid.webm" type="video/webm">
     Your browser does not support the video tag.
 </video>
-<video id="playdate-vid-2" style="margin-top: -15px; width:351px; margin-bottom:18px;" controls loop>
+<video class="video" style="margin-top: -15px; width:351px; margin-bottom:18px;" controls loop>
     <source src="playdate_gif.webm" type="video/webm">
     Your browser does not support the video tag.
 </video>
@@ -181,11 +201,10 @@
 </div>
 </body>
 <script>
-    const video = document.getElementById('molt-vid');
-    video.playbackRate = 2;
-    const video2 = document.getElementById('molt-vid-2');
-    video2.playbackRate = 1.5;
-    const video4 = document.getElementById('playdate-vid-2');
-    video4.playbackRate = 1.5;
+    const className = 'video';
+    const videos = document.querySelectorAll(`video.${className}`);
+    videos.forEach(video => {
+        video.playbackRate = 1.5;
+    });
 </script>
 </html>
