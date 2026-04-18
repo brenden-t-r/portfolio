@@ -106,13 +106,13 @@
 
 </head>
 <body>
-<div class="sidebar">
+<!-- <div class="sidebar">
     <img alt="Brenden" class="avatar" src="avatar.jpg" loading="lazy">
     <div class="sidebar-text">
         <small>Brenden <br/>Romanowski</small><br/>
         <a href="https://www.linkedin.com/in/brenden-romanowski-405616152/" target="_blank">LinkedIn</a><br/>
     </div>
-</div>
+</div> -->
 
 <div class="content">
 <h1>Brenden's Game Portfolio</h1>
@@ -120,23 +120,21 @@
 
 <h2>Custom Game Engine</h2>
 <p>
-    A 2D game engine I'm building from scratch in C++.
-    It's purpose is to apply concepts from my studies in game engines and computer graphics, as well as a means
-    to make games from scratch.
+    A 2D game engine I'm building from scratch in C++ using minimal dependencies.
 </p>
 <p>
     <ul>
-        <li>Multiple backends (DirectX, OpenGL, Metal)</li>
+        <li>DirectX, OpenGL, Metal</li>
         <li>Cross-platform (Windows, Linux, MacOS, iOS)</li>
         <li>CMake build with engine statically linked to game</li>
         <li>Automated CICD builds for each platform</li>
         <li>Keyboard, mouse, gamepad and touch input</li>
         <li>Sprite and sprite atlas support</li>
-        <li>Transform, scale and rotation in 2D</li>
+        <li>Custom transform matrix math in 2D</li>
         <li>Collision detection (AABB, OOBB in 2D)</li>
         <li>Material system with support for abitrary constant buffer shader fields</li>
-        <li>Scenes</li>
-        <li>Custom font system</li>
+        <li>Scene abstraction</li>
+        <li>MSDF and Bitmap Fonts</li>
         <li>Coroutines</li>
         <li>Pub/sub events</li>
     </ul>
@@ -145,25 +143,21 @@
     
 <h2>Molt, the Snake-themed Card Game</h2>
 <p>
-    Molt is a turn-based strategy card game in the vein of Hearthstone, Dominion and Wingspan. It aims to be educational
+    Molt is a turn-based deckbuilding card game. It aims to be educational
     and fun, with realistic depictions of snake species.
 </p>
 <p>
     <ul>
         <li>Gamepad, touchscreen and mouse support</li>
         <li>Responsive UI for viewing and selecting cards in hand</li>
-        <li>Single player and local multiplayer game modes</li>
         <li>Flexible and stackable &#8220;Action&#8221; card system</li>
         <li>CI/CD pipeline for automatic build and deployment to Steam</li>
-        <li>No third party packages used</li>
+        <li>Highly flexible game design tools built into the game</li>
     </ul>
 </p>
 <p>
-    The game implements basic mechanics of a turn structure, card &#8220;buys&#8221;, putting cards into play via a food cost,
-    and Action cards with various effects.
-</p>
-<p>
-    <a href="https://store.steampowered.com/app/2483240/Molt/" target="_blank">https://store.steampowered.com/app/2483240/Molt/</a>
+    The game implements mechanics of a turn structure, card &#8220;buys&#8221;, putting cards into play via a food cost,
+    Action cards with various effects, and condition cards that apply for the duration of a match.
 </p>
 <p>
     <img src="molt_screenshot_1.png" style="margin-bottom:0;" alt="Molt screenshot"/>
